@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Minesweeper — GitHub Pages Demo</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div class="app">
+<div class="header" role="banner">
+<h1>Minesweeper</h1>
+<div class="controls" role="region" aria-label="Game controls">
+<label for="level">Difficulty:</label>
+<select id="level" aria-label="Select difficulty">
+<option value="easy">Easy (9×9, 10 mines)</option>
+<option value="medium" selected>Medium (16×16, 40 mines)</option>
+<option value="hard">Hard (16×30, 99 mines)</option>
+</select>
+<button id="newGame" class="btn">New Game</button>
+<button id="hint" class="btn">Hint</button>
+</div>
+</div>
+<div class="game-area">
+<div class="topbar">
+<div class="mines-left" id="minesLeft" aria-live="polite">Mines: 0</div>
+<div class="status" id="status" aria-live="polite">Press New Game to start.</div>
+<div class="timer" id="timer" aria-live="polite">Time: 0s</div>
+</div>
+<div id="boardWrap" class="board-wrap" role="application" aria-label="Minesweeper board"></div>
+<div class="sidebar">
+<div class="legend">
+<p><strong>Controls:</strong></p>
+<ul>
+<li>Click a cell to reveal</li>
+<li>Right-click or long-press to flag/unflag</li>
+<li>Use the Hint button for a safe reveal (limited)</li>
+</ul>
+</div>
+<div class="scores">
+<p><strong>Best times (local):</strong></p>
+<ol id="bestTimes"></ol>
+</div>
+</div>
+</div>
+<div class="footer">
+<p>Classic Minesweeper — accessible, keyboard-friendly, static site deployable to GitHub Pages.</p>
+</div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
